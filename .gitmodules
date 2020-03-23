@@ -1,0 +1,21 @@
+[submodule "Core"]
+	path = Core
+	url = https://github.com/Adamantica/CommunicatorCMS-Core.git
+[submodule "Web/Themes/DefaultTheme"]
+	path = Web/Themes/DefaultTheme
+	url = https://github.com/Adamantica/CommunicatorCMS-DefaultTheme.git
+[submodule "wwwroot/static/themes/DefaultTheme"]
+	path = wwwroot/static/themes/DefaultTheme
+	url = https://github.com/Adamantica/CommunicatorCMS-DefaultThemeStatic.git
+[submodule "Web/Rendering"]
+	path = Web/Rendering
+	url = https://github.com/Adamantica/CommunicatorCMS-Rendering.git
+[submodule "Web/Cms"]
+	path = Web/Cms
+	url = https://github.com/Adamantica/CommunicatorCMS-Cms.git
+[submodule "Web/Pages"]
+	path = Web/Pages
+	url = https://github.com/Adamantica/CommunicatorCMS-Sample-Pages.git
+[submodule "Web/Extensions"]
+	path = Web/Extensions
+	url = https://github.com/Adamantica/CommunicatorCMS-Sample-Extensions.git
