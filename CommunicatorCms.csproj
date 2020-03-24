@@ -12,43 +12,39 @@
     <Compile Remove="Actions\**" />
     <Compile Remove="Assets\**" />
     <Compile Remove="Data\**" />
+    <Compile Remove="Web\Actions\**" />
+    <Compile Remove="Web\Extensions\**" />
+    <Compile Remove="Web\General\**" />
+    <Compile Remove="Web\Pages\**" />
+    <Compile Remove="Web\Preview\**" />
     <Content Remove="Actions\**" />
     <Content Remove="Assets\**" />
     <Content Remove="Data\**" />
+    <Content Remove="Web\Actions\**" />
+    <Content Remove="Web\Extensions\**" />
+    <Content Remove="Web\General\**" />
+    <Content Remove="Web\Pages\**" />
+    <Content Remove="Web\Preview\**" />
     <EmbeddedResource Remove="Actions\**" />
     <EmbeddedResource Remove="Assets\**" />
     <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Web\Actions\**" />
+    <EmbeddedResource Remove="Web\Extensions\**" />
+    <EmbeddedResource Remove="Web\General\**" />
+    <EmbeddedResource Remove="Web\Pages\**" />
+    <EmbeddedResource Remove="Web\Preview\**" />
     <None Remove="Actions\**" />
     <None Remove="Assets\**" />
     <None Remove="Data\**" />
+    <None Remove="Web\Actions\**" />
+    <None Remove="Web\Extensions\**" />
+    <None Remove="Web\General\**" />
+    <None Remove="Web\Pages\**" />
+    <None Remove="Web\Preview\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\static\communicator-cms\Icon.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Web\Pages\Documentation\Content.html" />
-    <None Remove="Web\Pages\Dynamic\Documentation\Content.html" />
-    <None Remove="Web\Pages\Dynamic\GitHub\Content.html" />
-    <None Remove="Web\Pages\Dynamic\Privacy\Documentation\Content.html" />
-    <None Remove="Web\Pages\Dynamic\Privacy\Documentation\GitHub\Content.html" />
-    <None Remove="Web\Pages\Dynamic\Privacy\GitHub\Content.html" />
-    <None Remove="Web\Pages\GitHub\Content.html" />
-    <None Remove="Web\Pages\Privacy\Documentation\Content.html" />
-    <None Remove="Web\Pages\Privacy\GitHub\Content.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Web\Pages\Documentation\Content.html" />
-    <Content Include="Web\Pages\Dynamic\Documentation\Content.html" />
-    <Content Include="Web\Pages\Dynamic\GitHub\Content.html" />
-    <Content Include="Web\Pages\Dynamic\Privacy\Documentation\Content.html" />
-    <Content Include="Web\Pages\Dynamic\Privacy\Documentation\GitHub\Content.html" />
-    <Content Include="Web\Pages\Dynamic\Privacy\GitHub\Content.html" />
-    <Content Include="Web\Pages\GitHub\Content.html" />
-    <Content Include="Web\Pages\Privacy\Documentation\Content.html" />
-    <Content Include="Web\Pages\Privacy\GitHub\Content.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,12 +56,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Web\Actions\" />
-    <Folder Include="Web\Extensions\TestExtension\Reset\" />
-    <Folder Include="Web\Extensions\TestExtension\Ui\" />
+    <Folder Include="Core\" />
     <Folder Include="Web\Cms\" />
-    <Folder Include="Web\General\Footer\" />
-    <Folder Include="Web\Preview\" />
     <Folder Include="wwwroot\static\application\" />
     <Folder Include="wwwroot\static\custom\css\" />
     <Folder Include="wwwroot\static\custom\js\" />
