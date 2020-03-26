@@ -1,0 +1,33 @@
+﻿@using System.IO;
+@using System.Diagnostics;
+
+@{ 
+    var sw = new Stopwatch();
+    sw.Start();
+
+    for (var i = 0; i < 100; i++)
+    {
+        WriteLiteral("This is some logo content");
+    }
+
+    sw.Stop();
+
+
+    var sw1 = new Stopwatch();
+    sw1.Start();
+
+    for (var i = 0; i < 100; i++)
+    {
+        this.WriteLiteral(await File.ReadAllTextAsync(@"D:\Jnk\Test\BX14Y22.luc"));
+    }
+
+    sw1.Stop();
+
+    var t = 0;
+}
+
+@sw.ElapsedMilliseconds
+
+<br />
+
+@sw1.ElapsedMilliseconds

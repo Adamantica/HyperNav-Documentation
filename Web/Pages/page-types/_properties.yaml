@@ -1,0 +1,7 @@
+Title: Page Types
+
+SubPageOrder: 
+    - html-page
+    - markdown-page
+    - dynamic-page
+    - mixed-page

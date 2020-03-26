@@ -1,0 +1,8 @@
+Title: Home
+
+SubPageOrder: 
+    - ...
+    - Documentation
+    - GitHub
+
+SideNavigationMenuVisible: false
