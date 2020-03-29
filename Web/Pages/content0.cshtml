@@ -1,33 +1,13 @@
-﻿@using System.IO;
-@using System.Diagnostics;
+﻿    <section class="hero is-success is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div style="width: 100%; height: 20rem; display: flex; align-items: center; justify-content: center">
+                    <img src="~/static/communicator-cms/adamantica/logo.svg" style="width: 50%" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-@{ 
-    var sw = new Stopwatch();
-    sw.Start();
+<div style="height: 500px; width: 100px; background: red">
 
-    for (var i = 0; i < 100; i++)
-    {
-        WriteLiteral("This is some logo content");
-    }
-
-    sw.Stop();
-
-
-    var sw1 = new Stopwatch();
-    sw1.Start();
-
-    for (var i = 0; i < 100; i++)
-    {
-        this.WriteLiteral(await File.ReadAllTextAsync(@"D:\Jnk\Test\BX14Y22.luc"));
-    }
-
-    sw1.Stop();
-
-    var t = 0;
-}
-
-@sw.ElapsedMilliseconds
-
-<br />
-
-@sw1.ElapsedMilliseconds
+</div>

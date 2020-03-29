@@ -11,16 +11,24 @@
   <ItemGroup>
     <Compile Remove="Actions\**" />
     <Compile Remove="Assets\**" />
+    <Compile Remove="Web\Pages\page-types\**" />
     <Compile Remove="Web\Preview\**" />
+    <Compile Remove="wwwroot\static\themes\_default\**" />
     <Content Remove="Actions\**" />
     <Content Remove="Assets\**" />
+    <Content Remove="Web\Pages\page-types\**" />
     <Content Remove="Web\Preview\**" />
+    <Content Remove="wwwroot\static\themes\_default\**" />
     <EmbeddedResource Remove="Actions\**" />
     <EmbeddedResource Remove="Assets\**" />
+    <EmbeddedResource Remove="Web\Pages\page-types\**" />
     <EmbeddedResource Remove="Web\Preview\**" />
+    <EmbeddedResource Remove="wwwroot\static\themes\_default\**" />
     <None Remove="Actions\**" />
     <None Remove="Assets\**" />
+    <None Remove="Web\Pages\page-types\**" />
     <None Remove="Web\Preview\**" />
+    <None Remove="wwwroot\static\themes\_default\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,7 +42,6 @@
     <None Remove="WebSample\Pages\page-types\mixed-page\content0.html" />
     <None Remove="Web\General\Footer\content0.html" />
     <None Remove="Web\General\Head\meta.html" />
-    <None Remove="Web\General\Head\styles.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,7 +51,6 @@
     <Content Include="WebSample\Pages\page-types\mixed-page\content0.html" />
     <Content Include="Web\General\Footer\content0.html" />
     <Content Include="Web\General\Head\meta.html" />
-    <Content Include="Web\General\Head\styles.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,12 +71,10 @@
     <Folder Include="Web\Cms\" />
     <Folder Include="Web\Extensions\TestExtension\Reset\" />
     <Folder Include="Web\Extensions\TestExtension\Ui\" />
-    <Folder Include="wwwroot\static\application\" />
-    <Folder Include="wwwroot\static\custom\css\" />
-    <Folder Include="wwwroot\static\custom\js\" />
-    <Folder Include="wwwroot\static\custom\lib\Negatronic\.git\objects\info\" />
-    <Folder Include="wwwroot\static\custom\lib\Negatronic\.git\objects\pack\" />
-    <Folder Include="wwwroot\static\custom\lib\Negatronic\.git\refs\tags\" />
+    <Folder Include="wwwroot\static\application\lib\" />
+    <Folder Include="wwwroot\static\application\uploads\" />
+    <Folder Include="wwwroot\static\application\css\" />
+    <Folder Include="wwwroot\static\application\js\" />
     <Folder Include="wwwroot\static\extensions\" />
   </ItemGroup>
 
@@ -78,104 +82,7 @@
     <None Include="WebSample\Extensions\TestExtension\LoadExtension.cshtml" />
     <None Include="Web\Extensions\TestExtension\LoadExtension.cshtml" />
     <None Include="Web\Pages\content0.cshtml" />
-    <None Include="Web\Pages\page-types\dynamic-page\content0.cshtml" />
     <None Include="wwwroot\static\communicator-cms\icon.svg" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.gitignore" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\config" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\description" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\HEAD" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\applypatch-msg.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\commit-msg.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\fsmonitor-watchman.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\post-update.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\pre-applypatch.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\pre-commit.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\pre-push.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\pre-rebase.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\pre-receive.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\prepare-commit-msg.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\hooks\update.sample" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\index" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\info\exclude" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\logs\HEAD" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\logs\refs\heads\master" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\logs\refs\remotes\origin\HEAD" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\logs\refs\remotes\origin\master" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\02\b083b4a7240724d8e52124e5cd2160e5317c81" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\06\842d981a14bb94a15e53503c55ea1336a86d8b" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\07\9975c9cbf4f663af023a6ad1efcf075f7658fa" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\09\205d1363b6f1c9ec51b226eb89220ac21e9a97" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\09\f8804d1f3a7bafbe1c9da8bca16bb5b9f88b64" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\0a\5f66d5b44c0570cbd4b0478b442d79763a4248" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\0e\4249e1b50e542a227a65dbebeeaa2aceaca844" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\11\dd3eb47a6fd87c96a25a6d1d40c4ec2fd2d0c8" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\19\2a1f0c624fcf2f30598064658919059556bccb" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\21\300d7d53c33dbe7805aa18a34f97d1e833fdfb" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\21\51824bc8e44a5825b90dc63fac0a158145b982" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\24\4aad8a79542c87166642ff9c5ee80af10fd8d3" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\2a\0dab9f06d633d923788e05967956020a08f6a0" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\2c\b4c9e4b0053b91ad1270e12f05000a5815280b" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\3e\9c591ff731e8c3fbb05bb6813bca66994c2ea4" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\40\83b1419909344f2cb291d11ac23e19bfb37354" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\53\51742aed68df3a59793ae526647c08b825fdf3" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\5e\c8600ef851c1b1a9218adc4477cff71fd84f01" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\60\bf80980bbab06cab1a4b9936c11c595e59dca2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\6c\4521f26534abb925d6c51a03edd970618bb585" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\70\43b9e1954265b4f8f0b119a9240657c32e5571" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\76\6d892eb27caf55e1a98a51598f9bed8628e81d" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\77\6b0f17fc84bd0a1a5753faaa39caa4e72c794c" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\78\a1da4b14e99327151ee3d4957517c21eea481c" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\7c\9344efb2f48c19320cd47ab178df740426b47c" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\7e\7910b94247c00da68e0366c288a6d04065484b" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\86\10512bbef5bcd9cfea12c8c7c475112ac4965e" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\8b\febd51e906012d6f28751d903d71ec225ed1b1" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\90\df88359354cd7369ddb447eb1cf402245b4fd9" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\9c\03ef5eefbc2660e37b5b00f234df229a2a4e79" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\a8\162f897c786aa525db9333ffc36b27e7086c47" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\ac\68428d3c50bfdf341d2f062ec9de717d30d547" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\ae\58dd981b36e341483ddf926c8917c311369f74" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\ae\847a7fb4fe002113a482a8c07c8544e7bdfbcd" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b0\b0d007708e2e8fe74932bfc6287133f0069bb3" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b2\bb167365b93a896aefba07bce56987fc4c41ed" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b3\696367c80e662c8f0a5032bcd5245b2862e9ae" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b4\6c275c9df8f9c239de68034285f2245c1dfdb2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b4\d725efaf24b47c5a5ccd1213a4fc6eb0b993a8" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b8\48ada6bbc0693cb5fe04a0246f34744cbc4cd2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b9\654a0fd32e8b31d379f9d1bffb0d490617ab78" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\b9\ae914d50c7f149787de246766a068758c196b5" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\c7\61118103ccafecd8fcf20f9eb6deaf8fae3f70" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\c8\1344a3ca8129d65fe2f62b1599568ace874d25" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\cc\388b2b3be70285fa62071a741fb8ea16506f82" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\ce\afda70ef5bd90f37500688ba5b9ae62bca295f" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\cf\24f31315d1c264109c254962a3937300c8165b" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\cf\257f3843ddbe2b17173a6a95469ac6c3dc9fe4" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\d5\60eb146607ec2ebd7ad2da5d3aa2127c141c25" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\d9\26772cecbf8445760cfa2a0f3294a4b65d775e" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\dd\30765d5a65447bc7d82469a832a68c4543fefd" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\e2\91285193f620fd57ab4c392709b8f4196d5779" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\ee\9b070c107403ab756677dafb01ec659a0178cc" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\f3\b4690728475f0adcbc9b1d0160b5f569cebdb2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\f4\7e5c0ba7cd74475741ebb7f2d8f78ccc9e20c2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\f4\fbcf0f68b12b28c796cb80e3482c9f65b97686" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\f8\edbc273bfbe6d9712167b6f7c1518f9c23724d" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\f9\83d7283f339c43ec452a3074e7ed7e00aa74e8" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\objects\fe\1f4079d41e212abf87ad4f3ccbe025a5cea86b" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\packed-refs" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\refs\heads\master" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\refs\remotes\origin\HEAD" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\.git\refs\remotes\origin\master" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Assets\NegatronicLogo.svg" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Assets\NegatronicLogoDark.svg" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\FontsAdamantica\NegatronicBoldAdamantica.svg" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\FontsAdamantica\NegatronicBoldAdamantica.woff2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Fonts\NegatronicBold.svg" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Fonts\NegatronicBold.woff2" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\LICENSE" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\README.md" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Source\NegatronicBold.sfd" />
-    <None Include="wwwroot\static\custom\lib\Negatronic\Source\NegatronicBoldAdamantica.sfd" />
-    <None Include="wwwroot\static\themes\_default\lib\remixicon\__MACOSX\._remixicon.svg" />
-    <None Include="wwwroot\static\themes\_default\lib\remixicon\__MACOSX\._remixicon.symbol.svg" />
   </ItemGroup>
 
 

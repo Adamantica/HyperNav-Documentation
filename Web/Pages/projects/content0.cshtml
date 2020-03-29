@@ -1,0 +1,101 @@
+﻿@using YamlDotNet.Serialization;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.AppFileSystem;
+
+@functions
+{
+    public class ProjectItem
+    {
+        private static string ProjectRootDirectoryName = "Projects";
+        private static string PropertiesFileName = "Properties.yaml";
+        private static IDeserializer YamlDeserializer = new DeserializerBuilder().IgnoreUnmatchedProperties().Build();
+
+        public string Title { get; set; } = "Unknown";
+        public string Description { get; set; } = "Unknown";
+        public string DateOfPublication { get; set; } = "TBA";
+
+        public string Url { get; set; } = "#";
+        public string LogoUrl { get; set; } = "#";
+        public string GitHubUrl { get; set; } = "#";
+
+        public List<string> Tags { get; set; } = new List<string>();
+
+        public static async Task<List<ProjectItem>> GetProjectItems()
+        {
+            var subDirectoryAppPaths = AppDirectory.GetDirectories(AppPath.Join(GeneralSettings.DataRootPath, ProjectRootDirectoryName));
+
+            var projectItems = new List<ProjectItem>(subDirectoryAppPaths.Length);
+
+            foreach (var subDirAppPath in subDirectoryAppPaths)
+            {
+                if (IsAppPathProjectItem(subDirAppPath))
+                {
+                    projectItems.Add(await LoadFromAppPath(subDirAppPath));
+                }
+            }
+
+            return projectItems;
+        }
+
+        private static bool IsAppPathProjectItem(string appPath)
+        {
+            return AppFile.Exists(AppPath.Join(appPath, PropertiesFileName));
+        }
+        private static async Task<ProjectItem> LoadFromAppPath(string appPath)
+        {
+            var content = await AppFile.ReadAllTextAsync(AppPath.Join(appPath, PropertiesFileName));
+            return YamlDeserializer.Deserialize<ProjectItem>(content);
+        }
+    }
+}
+
+@{ 
+    var projectItems = await ProjectItem.GetProjectItems();
+}
+
+<h1>Projects</h1>
+<div class="columns">
+    @{
+        foreach (var projectItem in projectItems)
+        {
+            <div class="column" style="min-width: 25%; flex: 1">
+                <div class="card">
+                    <div class="card-content">
+
+                        <div class="content">
+                            <img src="@projectItem.LogoUrl" style="height: 4rem; align-self: flex-start;">
+
+                            <hr />
+
+                            <p style="flex-grow: 1; flex-shrink: 0;">
+                                @Html.Raw(projectItem.Description)
+                            </p>
+
+                            <div class="tags are-large">
+                                @{
+                                    foreach (var tag in projectItem.Tags)
+                                    {
+                                        <span class="tag is-warning">
+                                            @tag
+                                        </span>
+                                    }
+                                }
+                            </div>
+
+                            <p>
+                                <a href="@projectItem.Url">Project Website</a>
+                                <br />
+                                <a href="@projectItem.GitHubUrl">GitHub Repository</a>
+                            </p>
+                            <p>
+                                
+                                Published: @projectItem.DateOfPublication
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

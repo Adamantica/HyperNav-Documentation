@@ -1,8 +1,4 @@
 Title: Home
 
-SubPageOrder: 
-    - ...
-    - documentation
-    - github
-
-SideNavigationMenuVisible: false
+Layout: LandingPage
+ShowSideNavigationMenu: False
