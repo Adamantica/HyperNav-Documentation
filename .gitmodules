@@ -13,3 +13,6 @@
 [submodule "Web/Cms"]
 	path = Web/Cms
 	url = https://github.com/Adamantica/CommunicatorCMS-Cms.git
+[submodule "GitCommands"]
+	path = GitCommands
+	url = https://github.com/Adamantica/CommunicatorCMS-GitCommands.git
