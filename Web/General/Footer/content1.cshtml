@@ -1,1 +1,105 @@
-﻿Copyrighrt
+﻿@using CommunicatorCms.Core;
+@using CommunicatorCms.Core.AppFileSystem;
+
+@inject RequestState RequestState;
+
+<style>
+    #footer-column-section
+    {
+        padding-bottom: 20rem;
+    }
+    #footer-column-section ul
+    {
+       margin: 0;
+       list-style: none;
+    }
+</style>
+
+<section id="footer-column-section" class="section">
+    <div class="content container">
+        <div class="columns">
+            <div class="column">
+                <a href="/home">
+                    <h2>
+                        Home
+                    </h2>
+                </a>
+            </div>
+            <div class="column">
+                <a href="/documentation">
+                    <h2>
+                        Documentation
+                    </h2>
+                </a>
+                <ul>
+                    <li>
+                        <a href="/documentation/general">
+                            General
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/documentation/top-navigation-menu">
+                            Top Navigation Menu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/documentation/side-navigation-menu">
+                            Side Navigation Menu
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <a href="/examples">
+                    <h2>
+                        Examples
+                    </h2>
+                </a>
+                <ul>
+                    <li>
+                        <a href="/examples/example0">
+                            Example 0
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/examples/example1">
+                            Example 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/examples/example1">
+                            Example 2
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h2>
+                    Developed by
+                </h2>
+                <a href="https://adamantica.com">
+                    <img src="https://adamantica.com/static/projects/adamantica/logo.svg" />
+                    adamantica.com
+                </a>
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+
+        <div class="columns">
+            <div class="column">
+                <p style="text-align: center">
+                    @{
+                        var gitHubUrl = "https://github.com" + AppPath.Join("/Adamantica/HyperNav-Documentation/tree/master/Web/Pages", RequestState.Url);
+                    }
+                    This page is also open source. Noticed a typo, or want to suggest changes to the content?
+                    <a href="@gitHubUrl">Contribute on GitHub!</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
