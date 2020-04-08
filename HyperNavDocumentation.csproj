@@ -76,6 +76,7 @@
     <Folder Include="wwwroot\static\application\css\" />
     <Folder Include="wwwroot\static\application\js\" />
     <Folder Include="wwwroot\static\extensions\" />
+    <Folder Include="wwwroot\static\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
