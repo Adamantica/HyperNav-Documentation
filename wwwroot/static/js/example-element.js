@@ -54,6 +54,7 @@ function initializeExampleElements()
         var editor = CodeMirror.fromTextArea(textarea,
         {
             lineNumbers: true,
+            lineWrapping: true,
             theme: "twilight"
         });
 
@@ -96,7 +97,7 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
     mobileButton.addEventListener('click', function ()
     {
         iframe.style.maxWidth = '768px';
-        iframe.style.minWidth = '768px';
+        iframe.style.minWidth = '0px';
 
         mobileButton.classList.add("is-light");
         desktopButton.classList.remove("is-light");
