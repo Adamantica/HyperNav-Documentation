@@ -13,6 +13,7 @@ function initializeExampleElements()
     for (var i = 0; i < exampleElements.length; i++)
     {
         var exampleElement = exampleElements[i];
+        var onlyCode = exampleElement.classList.contains("only-code");
 
         var iframe = document.createElement("iframe");
         iframe.src = exampleElement.dataset.src;
@@ -27,11 +28,17 @@ function initializeExampleElements()
         applyButton.innerHTML = "Apply";
 
         var resetButton = document.createElement("button");
-        resetButton.className = "button is-danger";
+        resetButton.className = "button is-danger reset-button";
         resetButton.innerHTML = "Reset";
 
         var spacer = document.createElement("div");
         spacer.style.flex = "1";
+        /*
+        spacer.innerHTML = "<div>This code is editable!<div>";
+        spacer.style.display = "flex";
+        spacer.style.alignItems = "center";
+        spacer.style.justifyContent = "center";
+        */
 
         var desktopButton = document.createElement("button");
         desktopButton.className = "button is-light";
@@ -41,12 +48,14 @@ function initializeExampleElements()
         mobileButton.className = "button";
         mobileButton.innerHTML = "Mobile";
 
+
         buttonContainer.appendChild(applyButton);
         buttonContainer.appendChild(resetButton);
         buttonContainer.appendChild(spacer);
         buttonContainer.appendChild(desktopButton);
         buttonContainer.appendChild(mobileButton);
 
+        
         exampleElement.appendChild(iframe);
         exampleElement.appendChild(textarea);
         exampleElement.appendChild(buttonContainer);
@@ -55,6 +64,7 @@ function initializeExampleElements()
         {
             lineNumbers: true,
             lineWrapping: true,
+            readOnly: onlyCode,
             theme: "twilight"
         });
 
@@ -81,8 +91,6 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
     resetButton.addEventListener('click', function ()
     {
         iframe.contentWindow.location.reload();
-
-        editor.setValue(trimUnnecessaryIndentation(iframe.contentWindow.document.body.innerHTML));
     });
 
     desktopButton.addEventListener('click', function ()

@@ -1,1 +1,7 @@
 Title: General
+
+SubPageOrder:
+    - device
+    - input-item
+    - nav-item
+    - structure

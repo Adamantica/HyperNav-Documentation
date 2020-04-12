@@ -1,4 +1,17 @@
-﻿<section class="hero is-fullheight" style="background: transparent; padding-top: 5rem">
+﻿<!--
+// GrapesJs: RAZOR START
+
+    @{
+        for (var i = 0; i < 10; i++)
+        {
+            <p>@i</p>
+        }
+    }
+
+RAZOR END
+-->
+
+<section class="hero is-fullheight" style="background: transparent; padding-top: 5rem">
     <div class="hero-body">
         <div class="container content">
             <div class="columns">
@@ -93,19 +106,19 @@
         {
             flex: 1;
         }
-        
-        #features-section .column ul
-        {
-            margin: 0;
-            list-style: none;
-        }
-        
-        #features-section .column ul li::before
-        {
-            content: "✔";
-        }
+
+            #features-section .column ul
+            {
+                margin: 0;
+                list-style: none;
+            }
+
+                #features-section .column ul li::before
+                {
+                    content: "✔";
+                }
     </style>
-    
+
     <div class="content container">
         <div class="columns">
             <div class="column">
@@ -196,7 +209,7 @@
             Licensing
         </h2>
         <p>
-            HyperNav is published under the <a href="https://opensource.org/licenses/MIT">MIT license</a>, which is a permissive open source license. 
+            HyperNav is published under the <a href="https://opensource.org/licenses/MIT">MIT license</a>, which is a permissive open source license.
             This means that HyperNav can be integrated in proprietary software free of charge.
         </p>
     </div>
