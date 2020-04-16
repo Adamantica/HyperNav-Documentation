@@ -35,3 +35,8 @@
     min-height: 200px;
     max-height: 400px;
 }
+
+.only-code .CodeMirror-scroll
+{
+    max-height: initial;
+}

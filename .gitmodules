@@ -7,12 +7,12 @@
 [submodule "wwwroot/static/themes/DefaultTheme"]
 	path = wwwroot/static/themes/DefaultTheme
 	url = https://github.com/Adamantica/CommunicatorCMS-DefaultThemeStatic.git
-[submodule "Web/Rendering"]
-	path = Web/Rendering
-	url = https://github.com/Adamantica/CommunicatorCMS-Rendering.git
 [submodule "Web/Cms"]
 	path = Web/Cms
 	url = https://github.com/Adamantica/CommunicatorCMS-Cms.git
 [submodule "GitCommands"]
 	path = GitCommands
 	url = https://github.com/Adamantica/CommunicatorCMS-GitCommands.git
+[submodule "Web/_rendering"]
+	path = Web/_rendering
+	url = https://github.com/Adamantica/CommunicatorCMS-Rendering.git

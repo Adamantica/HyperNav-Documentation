@@ -25,7 +25,7 @@ function initializeExampleElements()
 
         var applyButton = document.createElement("button");
         applyButton.className = "button is-success";
-        applyButton.innerHTML = "Apply";
+        applyButton.innerHTML = "Apply Changes";
 
         var resetButton = document.createElement("button");
         resetButton.className = "button is-danger reset-button";

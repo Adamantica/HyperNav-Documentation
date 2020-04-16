@@ -11,22 +11,22 @@
   <ItemGroup>
     <Compile Remove="Actions\**" />
     <Compile Remove="Assets\**" />
-    <Compile Remove="Web\Pages\page-types\**" />
+    <Compile Remove="Web\Www\page-types\**" />
     <Compile Remove="Web\Preview\**" />
     <Compile Remove="wwwroot\static\themes\_default\**" />
     <Content Remove="Actions\**" />
     <Content Remove="Assets\**" />
-    <Content Remove="Web\Pages\page-types\**" />
+    <Content Remove="Web\Www\page-types\**" />
     <Content Remove="Web\Preview\**" />
     <Content Remove="wwwroot\static\themes\_default\**" />
     <EmbeddedResource Remove="Actions\**" />
     <EmbeddedResource Remove="Assets\**" />
-    <EmbeddedResource Remove="Web\Pages\page-types\**" />
+    <EmbeddedResource Remove="Web\Www\page-types\**" />
     <EmbeddedResource Remove="Web\Preview\**" />
     <EmbeddedResource Remove="wwwroot\static\themes\_default\**" />
     <None Remove="Actions\**" />
     <None Remove="Assets\**" />
-    <None Remove="Web\Pages\page-types\**" />
+    <None Remove="Web\Www\page-types\**" />
     <None Remove="Web\Preview\**" />
     <None Remove="wwwroot\static\themes\_default\**" />
   </ItemGroup>
@@ -36,21 +36,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="WebSample\Pages\page-types\content0.md" />
-    <None Remove="WebSample\Pages\page-types\html-page\content0.html" />
-    <None Remove="WebSample\Pages\page-types\markdown-page\content0.md" />
-    <None Remove="WebSample\Pages\page-types\mixed-page\content0.html" />
-    <None Remove="Web\General\Footer\content0.html" />
-    <None Remove="Web\General\Head\meta.html" />
+    <None Remove="Web\general\footer\content0.html" />
+    <None Remove="Web\general\head\meta.html" />
+    <None Remove="Web\Www\TextFile.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="WebSample\Pages\page-types\content0.md" />
-    <Content Include="WebSample\Pages\page-types\markdown-page\content0.md" />
-    <Content Include="WebSample\Pages\page-types\html-page\content0.html" />
-    <Content Include="WebSample\Pages\page-types\mixed-page\content0.html" />
-    <Content Include="Web\General\Footer\content0.html" />
-    <Content Include="Web\General\Head\meta.html" />
+    <Content Include="Web\general\footer\content0.html" />
+    <Content Include="Web\general\head\meta.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,14 +56,9 @@
 
   <ItemGroup>
     <Folder Include="Data\Analytics\" />
-    <Folder Include="WebSample\Extensions\TestExtension\Reset\" />
-    <Folder Include="WebSample\Extensions\TestExtension\Ui\" />
-    <Folder Include="WebSample\General\" />
-    <Folder Include="WebSample\Pages\github\" />
-    <Folder Include="WebSample\Pages\documentation\" />
-    <Folder Include="Web\Cms\" />
-    <Folder Include="Web\Extensions\TestExtension\Reset\" />
-    <Folder Include="Web\Extensions\TestExtension\Ui\" />
+    <Folder Include="Web\cms\" />
+    <Folder Include="Web\extensions\TestExtension\Reset\" />
+    <Folder Include="Web\extensions\TestExtension\Ui\" />
     <Folder Include="wwwroot\static\application\lib\" />
     <Folder Include="wwwroot\static\application\uploads\" />
     <Folder Include="wwwroot\static\application\css\" />
@@ -80,9 +68,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="WebSample\Extensions\TestExtension\LoadExtension.cshtml" />
-    <None Include="Web\Extensions\TestExtension\LoadExtension.cshtml" />
-    <None Include="Web\Pages\content0.cshtml" />
+    <None Include="Web\extensions\TestExtension\LoadExtension.cshtml" />
+    <None Include="Web\Www\content0.cshtml" />
     <None Include="wwwroot\static\communicator-cms\icon.svg" />
   </ItemGroup>
 
