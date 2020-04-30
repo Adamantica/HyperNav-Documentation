@@ -1,0 +1,163 @@
+﻿@using System.Net.Http;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.Actions;
+@using Utf8Json;
+@using CommunicatorCms.Core;
+@using CommunicatorCms;
+@using CommunicatorCms.Core.AppFileSystem;
+
+@inject RequestState RequestState;
+
+@functions{
+
+    private int _cbIdSuffix = 0;
+
+    public async Task RenderNavigationItem(SourcePage sourcePage, SourcePage activePage, int maxDepth = -1)
+    {
+        if (!sourcePage.Properties.ShowInNavigationMenus)
+        {
+            return;
+        }
+
+        <div style="flex: @sourcePage.PropertiesLayout.SpaceBefore.ToString(App.AmericanCultureInfo)">
+        </div>
+
+        var activeClass = "";
+        var checkedAttribute = "";
+
+        if (sourcePage.Url == activePage.Url)
+        {
+            activeClass = "hn-active";
+            checkedAttribute = "checked";
+        }
+        else if (sourcePage.Url != "/" && AppPath.IsParentUrl(sourcePage.Url, activePage.Url)) 
+        {
+            activeClass = "hn-active-child";
+            checkedAttribute = "checked";
+        }
+
+        var subPages = await sourcePage.GetSubPages();
+
+        if (subPages.Count == 0 || maxDepth == 0)
+        {
+            <a class="hn-item @activeClass @sourcePage.PropertiesLayout.CssClasses" style="@sourcePage.PropertiesLayout.CssInline" href="@sourcePage.Url">
+
+                @{
+                    if (!string.IsNullOrEmpty(sourcePage.Properties.Icon))
+                    {
+                        <span class="hn-icon">
+                            @sourcePage.Properties.Icon
+                        </span>
+                    }
+                }
+                <span class="hn-content" data-hn-content="@sourcePage.Properties.Title">
+                    @sourcePage.Properties.Title
+                </span>
+            </a>
+        }
+        else
+        {
+            _cbIdSuffix++;
+            <div class="hn-expand @sourcePage.PropertiesLayout.ExpandCssClasses" style="@sourcePage.PropertiesLayout.ExpandCssInline">
+                <input type="checkbox" id="nav-cb@_cbIdSuffix" class="hn-input-state" >
+
+                
+                <div class="hn-item @activeClass @sourcePage.PropertiesLayout.ExpandCssClasses" style="@sourcePage.PropertiesLayout.CssInline">
+                    <a class="hn-link" href="@sourcePage.Url">
+                        @{
+                            if (!string.IsNullOrEmpty(sourcePage.Properties.Icon))
+                            {
+                                <span class="hn-icon">
+                                    @sourcePage.Properties.Icon
+                                </span>
+                            }
+                        }
+                        <span class="hn-content" data-hn-content="@sourcePage.Properties.Title">
+                            @sourcePage.Properties.Title
+                        </span>
+                    </a>
+
+                    <label for="nav-cb@_cbIdSuffix" class="hn-input">
+                        <span class="hn-input-default">
+                            <i class="ri-add-line"></i>
+                        </span>
+                        <span class="hn-input-active">
+                            <i class="ri-subtract-line"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="hn-expand-body">
+                    @{
+                        maxDepth--;
+                        foreach (var subPage in subPages)
+                        {
+                            await RenderNavigationItem(subPage, activePage, maxDepth);
+                        }
+                    }
+                </div>
+
+            </div>
+                        }
+
+                        if (sourcePage.PropertiesLayout.SpaceAfter != 0)
+                        {
+            <div style="flex: @sourcePage.PropertiesLayout.SpaceAfter.ToString(App.AmericanCultureInfo)">
+            </div>
+        }
+    }
+}
+
+@{
+    var rootPage = await RequestState.GetPageByUrl("/");
+    var activePage = await RequestState.GetCurrentPage();
+}
+
+@{
+    if (activePage.Properties.ShowTopNavigationMenu)
+    {
+        <nav class="hyper-nav hn-top hn-fixed hn-top-shadow">
+            <input type="checkbox" id="hn-expand-button" class="hn-input-state hn-input-state-nav hn-hide-desktop">
+            <div class="hn-nav container">
+                <div class="hn-section hn-section-brand">
+                    @{
+                        if (AppSettings.Logo != "")
+                        {
+                            <a class="hn-item" href="/">
+                                <span class="hn-icon">
+                                    @Html.Raw(AppSettings.Logo)
+                                </span>
+                            </a>
+                        }
+                    }
+
+                    <div class="hn-spacer hn-hide-desktop">
+
+                    </div>
+                    <label for="hn-expand-button" class="hn-item hn-input hn-hide-desktop">
+                        <span class="hn-icon">
+                            <span class="hn-input-default">
+                                <i class="ri-menu-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <div class="hn-section hn-section-body">
+                    @{
+                        await RenderNavigationItem(rootPage, activePage, 0);
+
+                        foreach (var subPage in await rootPage.GetSubPages())
+                        {
+                            await RenderNavigationItem(subPage, activePage);
+                        }
+                    }
+                </div>
+            </div>
+            <label class="hn-overlay hn-overlay-nav hn-hide-desktop" for="hn-expand-button">
+            </label>
+        </nav>
+    }
+}

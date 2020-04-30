@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/lib/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/lib/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 15rem">
+    <nav class="hyper-nav hn-top">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="mcb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-0" id="scb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-none" id="none">
+
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+
+                <div class="hn-item">
+                    <div class="hn-icon">
+                        <img src="https://adamantica.com/projects/hyper-nav/logo.svg" style="height: 3rem;">
+                    </div>
+                </div>
+                <a class="hn-item">
+                    <span class="hn-icon">
+                        <i class="ri-home-3-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Home">
+                        Home
+                    </span>
+                </a>
+
+                <div class="hn-spacer">
+
+                </div>
+
+                <label for="scb" class="hn-item hn-input hn-input-mode-0 hn-hide-desktop">
+                    <span class="hn-icon hn-input-default hn-input-active">
+                        <i class="ri-search-line"></i>
+                    </span>
+                </label>
+
+                <div class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                    <label class="hn-icon hn-input-default" for="mcb">
+                        <i class="ri-menu-line"></i>
+                    </label>
+                    <label class="hn-icon hn-input-active" for="none">
+                        <i class="ri-close-line"></i>
+                    </label>
+                </div>
+
+            </div>
+            <div class="hn-section hn-section-body">
+                <div class="hn-spacer">
+
+                </div>
+                <a class="hn-item">
+                    <span class="hn-content">
+                        Favorites
+                    </span>
+                </a>
+                <a class="hn-item">
+                    <span class="hn-content">
+                        Products
+                    </span>
+                </a>
+                <label for="scb" class="hn-item hn-input hn-input-mode-0 hn-hide-mobile">
+                    <span class="hn-icon hn-input-default hn-input-active">
+                        <i class="ri-search-line"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="hn-mode hn-mode-0">
+            <div class="hn-mode-top">
+                <div class="hn-nav">
+                    <div class="hn-section hn-section-brand">
+
+                        <!-- Inline stylized search bar utilizing hn-item layout. -->
+                        <div class="hn-item hn-item-disabled" style="flex: 1">
+                            <div class="hn-content" style="width: 100%">
+                                <div style="width: 100%; display: flex">
+                                    <input type="text" placeholder="Search" style="flex: 1" />
+                                    <button>
+                                        Go
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Search mode close button. Note that for targets "none". -->
+                        <label for="none" class="hn-item hn-input hn-input-mode-0">
+                            <span class="hn-icon hn-input-default hn-input-active">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay that acts as a closing button. -->
+        <label for="none" class="hn-overlay">
+        </label>
+
+    </nav>
+</body>
+
+</html>
