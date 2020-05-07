@@ -1,1 +1,2 @@
-CssInline: "min-width: 300px"
+Top:
+    ExpandCssInline: "width: 300px"
