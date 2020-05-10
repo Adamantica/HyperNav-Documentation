@@ -14,6 +14,7 @@ function initializeExampleElements()
     {
         var exampleElement = exampleElements[i];
         var onlyCode = exampleElement.classList.contains("only-code");
+        var side = exampleElement.classList.contains("side");
 
         var iframe = document.createElement("iframe");
         iframe.src = exampleElement.dataset.src;
@@ -59,6 +60,11 @@ function initializeExampleElements()
         exampleElement.appendChild(iframe);
         exampleElement.appendChild(textarea);
         exampleElement.appendChild(buttonContainer);
+
+        if (side)
+        {
+            exampleElement.classList.add("side");
+        }
 
         var editor = CodeMirror.fromTextArea(textarea,
         {

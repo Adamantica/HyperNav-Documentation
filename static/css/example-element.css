@@ -3,6 +3,7 @@
     background: rgba(30,30,30,1);
     margin-bottom: 1rem;
 }
+
     .example > iframe
     {
         width: 1px;
@@ -24,6 +25,32 @@
     {
         display: none;
     }
+
+    /*
+    .example.side
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .example.side > iframe
+        {
+            height: unset !important;
+            width: 25% !important;
+            min-width: 0 !important;
+        }
+
+        .example.side > .CodeMirror
+        {
+            flex: 1;
+        }
+
+        .example.side > .buttons
+        {
+            flex-basis: 100%;
+        }
+    */
+
 
 .CodeMirror
 {

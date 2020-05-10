@@ -27,3 +27,9 @@ An asymmetric input item has different functions depending on the current state.
 is seldom needed.
 
 <div class="example only-code" data-src="examples/asymmetric-input.html"></div>
+
+## Initial State
+
+The initial state of the input item can be manipulated by specifying the `checked` attribute.
+
+<div class="example only-code" data-src="examples/initial-state.html"></div>

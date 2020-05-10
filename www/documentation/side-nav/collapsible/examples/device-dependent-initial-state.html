@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/lib/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/lib/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 18rem">
+    <nav class="hyper-nav hn-side">
+        <!-- 
+            The collapsible state elements. 
+            One for desktop and one for mobile devices. 
+            The initial state of the desktop has been set to 
+            not collapsed with the 'checked' attribute.
+        -->
+        <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-mobile" id="desktop-cb" checked>
+        <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="mobile-cb">
+
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+
+                <!-- 
+                    The collapsible state input elements. 
+                    Separate for mobile and desktop.
+                    Note that the ids and the logic matches
+                    with the above.
+                -->
+                <label class="hn-item hn-hide-mobile" for="desktop-cb">
+                    <span class="hn-icon">
+                        <i class="ri-menu-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Home">
+                        Menu
+                    </span>
+                </label>
+
+                <label class="hn-item hn-hide-desktop" for="mobile-cb">
+                    <span class="hn-icon">
+                        <i class="ri-menu-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Home">
+                        Menu
+                    </span>
+                </label>
+
+                <a class="hn-item hn-active">
+                    <span class="hn-icon">
+                        <i class="ri-home-3-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Home">
+                        Home
+                    </span>
+                </a>
+
+                <a class="hn-item">
+                    <span class="hn-icon">
+                        <i class="ri-star-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Favorites">
+                        Favorites
+                    </span>
+                </a>
+
+                <a class="hn-item">
+                    <span class="hn-icon">
+                        <i class="ri-refresh-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="References">
+                        References
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

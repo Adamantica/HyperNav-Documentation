@@ -20,7 +20,7 @@ To fix this in HyperNav you should give the element with class `.hn-content` the
 
 <div class="example only-code" data-src="examples/bold-displacement-fix.html"></div>
 
-## Navigation and Input Item Combination 1
+## Navigation and Input Item Combination Full
 
 A combination of the navigation and input items. This combination is such
 that the entire combination works as an input item. In other words, the 
@@ -28,7 +28,7 @@ combination can not work as a link.
 
 <div class="example only-code" data-src="examples/nav-input-full.html"></div>
 
-## Navigation and Input Item Combination 2
+## Navigation and Input Item Combination Separate
 
 A combination of the navigation and input items. This combination is such
 that the combination looks like one element, but does still work as both
