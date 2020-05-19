@@ -15,8 +15,11 @@ The basic navigation item.
 The `font-weight` property affects layout dimensions, which can be problematic
 if, for example, when an active navigation item should be displayed with bold text.
 Read an article about the problem [here](https://www.sitepoint.com/quick-tip-fixing-font-weight-problem-hover-states/).
-To fix this in HyperNav you should give the element with class `.hn-content` the attribute 
-`data-hn-content`, which should have the same value as the element itself.
+In practice, the problem affects only those layouts that are of horizontal nature, 
+which means that the fix is often unnecessary for HyperNav side menus.
+Regardless, to fix this in HyperNav you should give the element with class `.hn-content` the attribute 
+`data-hn-content`, which should have the same value as the element itself. 
+
 
 <div class="example only-code" data-src="examples/bold-displacement-fix.html"></div>
 

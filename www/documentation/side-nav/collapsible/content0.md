@@ -2,9 +2,7 @@
 
 The HyperNav side navigation menu supports a collapsed state on both mobile and
 desktop devices. The collapsed state is infinitely nestable and depends on
-icons for proper user experience. Additionally, the collapsed state does not
-support elements of the type "Navigation and Input Item Combination Full" 
-([see nav item documentation](/documentation/general/nav-item/)).
+icons for proper user experience. 
 
 ## Default
 
