@@ -2,3 +2,7 @@ Title: Home
 
 Layout: LandingPage
 ShowSideNavigationMenu: False
+
+SubPageOrder:
+  - features
+  - documentation

@@ -67,3 +67,8 @@
 {
     max-height: initial;
 }
+
+.CodeMirror-vscrollbar
+{
+    outline: none;
+}

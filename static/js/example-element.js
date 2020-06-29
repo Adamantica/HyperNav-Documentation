@@ -13,6 +13,9 @@ function initializeExampleElements()
     for (var i = 0; i < exampleElements.length; i++)
     {
         var exampleElement = exampleElements[i];
+        exampleElement.classList.add("d-flex");
+        exampleElement.classList.add("flex-column");
+
         var onlyCode = exampleElement.classList.contains("only-code");
         var side = exampleElement.classList.contains("side");
 
@@ -22,14 +25,14 @@ function initializeExampleElements()
         var textarea = document.createElement("textarea");
 
         var buttonContainer = document.createElement("div");
-        buttonContainer.className = "buttons are-large";
+        buttonContainer.className = "d-flex";
 
         var applyButton = document.createElement("button");
-        applyButton.className = "button is-success";
+        applyButton.className = "btn btn-success m-1";
         applyButton.innerHTML = "Apply Changes";
 
         var resetButton = document.createElement("button");
-        resetButton.className = "button is-danger reset-button";
+        resetButton.className = "btn btn-danger reset-button m-1";
         resetButton.innerHTML = "Reset";
 
         var spacer = document.createElement("div");
@@ -42,11 +45,11 @@ function initializeExampleElements()
         */
 
         var desktopButton = document.createElement("button");
-        desktopButton.className = "button is-light";
+        desktopButton.className = "btn btn-light m-1";
         desktopButton.innerHTML = "Desktop";
 
         var mobileButton = document.createElement("button");
-        mobileButton.className = "button";
+        mobileButton.className = "btn btn-dark m-1";
         mobileButton.innerHTML = "Mobile";
 
 
@@ -104,8 +107,10 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
         iframe.style.maxWidth = '100%';
         iframe.style.minWidth = '100%';
 
-        desktopButton.classList.add("is-light");
-        mobileButton.classList.remove("is-light");
+        desktopButton.classList.add("btn-light");
+        desktopButton.classList.remove("btn-dark");
+        mobileButton.classList.add("btn-dark");
+        mobileButton.classList.remove("btn-light");
     });
 
     mobileButton.addEventListener('click', function ()
@@ -113,8 +118,10 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
         iframe.style.maxWidth = '768px';
         iframe.style.minWidth = '0px';
 
-        mobileButton.classList.add("is-light");
-        desktopButton.classList.remove("is-light");
+        mobileButton.classList.add("btn-light");
+        mobileButton.classList.remove("btn-dark");
+        desktopButton.classList.add("btn-dark");
+        desktopButton.classList.remove("btn-light");
     });
 
 }
