@@ -1,24 +1,22 @@
 ﻿# Usage
 
-Clone (or download) the [HyperNav GitHub repository](https://github.com/Adamantica/HyperNav) and link to 
-the file `hyper-nav-without-css-vars.min.css` from a HTML document. You should then copy the file 
-`hyper-nav-css-vars.min.css` to a location of your choosing and link to it as well. Change 
-the variable declarations here to affect the behavior of HyperNav.
+Clone (or download) the [HyperNav GitHub repository](https://github.com/Acmion/HyperNav) and link to 
+the file `hyper-nav.min.css` from a HTML document. You must also link to a file that contains the
+declarations for the CSS variables (this is most often a custom file). The default CSS variable 
+declarations can be found in the file `themes/default/variables.min.css`.
 
 ```
-<link rel="stylesheet" href="path/to/HyperNav/dist/hyper-nav-without-css-vars.min.css"/>
-<link rel="stylesheet" href="path/to/your/copy/of/hyper-css-vars.min.css"/>
+<link rel="stylesheet" href="path/to/HyperNav/dist/hyper-nav.min.css"/>
+<link rel="stylesheet" href="path/to/HyperNav/dist/themes/default/variables.min.css"/>
 ```
 
 ## Alternative Usage
 
-Link to `hyper-nav.min.css` from your HTML document. This will include everything that HyperNav needs.
-Both the default definitions for the CSS variables and the CSS classes will be imported. However, this
-is not the recommended way, because the CSS variables will most likely have to be overridden, which would
-effectively mean that you have some unnecessary definitions.
+HyperNav default theme can also be enabled by loading in a single CSS file, `hyper-nav-default.min.css`. This file
+is just a combination of the files mentioned above. 
 
 ```
-<link rel="stylesheet" href="path/to/HyperNav/dist/hyper-nav.min.css"/>
+<link rel="stylesheet" href="path/to/HyperNav/dist/hyper-nav-default.min.css"/>
 ```
 
 ## CSS Variable Ponyfill

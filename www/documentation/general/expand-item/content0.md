@@ -3,33 +3,56 @@
 This page documents the expand item in HyperNav. 
 These items are expandable sub menus, which can take the form of
 mega menus and dropdowns. These items should not be nested within 
-`.hn-section-brand` as they will not work correctly on mobile devices.
+`.hn-section-brand` as they will not work correctly on mobile devices. 
+Additionally, this page documents several types of items, which should
+not be mixed on a website for the best user experience.
 
-## Basic
+## Full Button
 
-The basic expand item. This item acts as a single button and 
-does not support a link.
+A full button expand item. Clicking or hovering the button toggles the dropdown menu.
 
-<div class="example only-code" data-src="examples/structure.html"></div>
+<div class="example" data-src="examples/full-button.html"></div>
 
-## Navigation and Input
+## Split Button
 
-This expand item supports both a navigation item and an input element.
+A split button expand item. The item also works as a link, if not clicked on the plus sign. 
+Clicking the plus sign or hovering the button toggles the dropdown menu.
 
-<div class="example only-code" data-src="examples/nav-input.html"></div>
+<div class="example" data-src="examples/split-button.html"></div>
 
-## Placement
+## Non-Hoverable Buttons
 
-You can change the behavior of the expand item with the following classes:
+A full and a split button expand item that will not toggle the dropdown menu on hover. This is 
+achieved by adding the class `.hn-no-hover` to the `.hn-expand` element.
+
+<div class="example" data-src="examples/non-hoverable-button.html"></div>
+
+## Non-Clickable Desktop Buttons
+
+A full and a split button expand item that will only toggle on hover in the desktop view. 
+Clicking the split button anywhere on desktop will trigger navigation.
+The buttons work as above in the mobile view. The behavior is 
+achieved by using the utility classes `.hn-hide-mobile` and `.hn-hide-desktop` as well
+as some additional HTML content.
+
+<div class="example" data-src="examples/non-clickable-desktop-button.html"></div>
+
+## Mega Menu
+
+A full and a split button mega menu expand item. Mega menus are created by 
+adding the class `.hn-expand-mega` to the `.hn-expand` element. Custom content
+can be wrapped within a `div` with class `.hn-link`, which results in the same
+spacing as otherwise in HyperNav.
+
+<div class="example" data-src="examples/mega-menu-button.html"></div>
+
+## Dropdown Placement
+
+You can change the placement of the dropdown menu with the following classes:
 
 + `.hn-expand-left`: The expand item expands to the left.
 + `.hn-expand-center`: The expand item expands so that it is aligned to the center.
-+ `.hn-expand-mega`: The expand item functions as a mega menu.
 
-These classes should be added to the element with the class `.hn-expand`
-(the top most element in the examples on this page).
+These classes should be added to the `.hn-expand` element.
 
-## Active State
-
-The expand item itself has no active state, but the [directives](/documentation/general/nav-item/#active-state)
-for `.hn-item` should still be followed for full compatibility. 
+<div class="example" data-src="examples/dropdown-placement.html"></div>

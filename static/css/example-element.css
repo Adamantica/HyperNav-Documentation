@@ -20,10 +20,10 @@
         padding: 1rem;
     }
 
-    .example.only-code > iframe,
-    .example.only-code > .buttons
+    .example.only-code iframe,
+    .example.only-code .example-button-container
     {
-        display: none;
+        display: none !important;
     }
 
     /*

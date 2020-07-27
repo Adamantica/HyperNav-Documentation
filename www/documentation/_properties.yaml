@@ -3,6 +3,7 @@ Title: Documentation
 SubPageOrder:
     - usage
     - variables
+    - theming
     - general
     - top-nav
     - side-nav

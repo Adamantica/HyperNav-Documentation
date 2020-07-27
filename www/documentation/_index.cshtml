@@ -1,2 +1,17 @@
 ﻿@page
+@model IndexModel
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Mvc.RazorPages;
 
+@functions
+{
+    public class IndexModel : PageModel
+    {
+        public int A = 0;
+        public void OnGet()
+        {
+            var a = 0;
+            A++;
+        }
+    }
+}

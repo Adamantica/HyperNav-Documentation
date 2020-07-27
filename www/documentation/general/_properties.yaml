@@ -1,8 +1,7 @@
 Title: General
 
 SubPageOrder:
-    - device
+    - structure
     - input-item
     - nav-item
     - expand-item
-    - structure

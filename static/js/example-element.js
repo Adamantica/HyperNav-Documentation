@@ -16,8 +16,8 @@ function initializeExampleElements()
         exampleElement.classList.add("d-flex");
         exampleElement.classList.add("flex-column");
 
-        var onlyCode = exampleElement.classList.contains("only-code");
         var side = exampleElement.classList.contains("side");
+        var onlyCode = exampleElement.classList.contains("only-code");
 
         var iframe = document.createElement("iframe");
         iframe.src = exampleElement.dataset.src;
@@ -25,7 +25,7 @@ function initializeExampleElements()
         var textarea = document.createElement("textarea");
 
         var buttonContainer = document.createElement("div");
-        buttonContainer.className = "d-flex";
+        buttonContainer.className = "d-flex example-button-container";
 
         var applyButton = document.createElement("button");
         applyButton.className = "btn btn-success m-1";
@@ -45,11 +45,11 @@ function initializeExampleElements()
         */
 
         var desktopButton = document.createElement("button");
-        desktopButton.className = "btn btn-light m-1";
+        desktopButton.className = "btn btn-light m-1 hn-hide-mobile";
         desktopButton.innerHTML = "Desktop";
 
         var mobileButton = document.createElement("button");
-        mobileButton.className = "btn btn-dark m-1";
+        mobileButton.className = "btn btn-dark m-1 hn-hide-mobile";
         mobileButton.innerHTML = "Mobile";
 
 
@@ -90,11 +90,18 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
     iframe.scrolling = "no";
     iFrameResize({}, iframe);
 
-    editor.setValue(trimUnnecessaryIndentation(iframe.contentWindow.document.body.innerHTML));
+    var rootElement = iframe.contentWindow.document.body;
+
+    if (iframe.contentWindow.document.getElementById("root") != null)
+    {
+        rootElement = iframe.contentWindow.document.getElementById("root");
+    }
+
+    editor.setValue(trimUnnecessaryIndentation(rootElement.innerHTML));
 
     applyButton.addEventListener('click', function ()
     {
-        iframe.contentWindow.document.body.innerHTML = editor.getValue();
+        rootElement.innerHTML = editor.getValue();
     });
 
     resetButton.addEventListener('click', function ()
@@ -115,7 +122,7 @@ function initializeExampleElementIframe(exampleElement, iframe, editor, applyBut
 
     mobileButton.addEventListener('click', function ()
     {
-        iframe.style.maxWidth = '768px';
+        iframe.style.maxWidth = '767px';
         iframe.style.minWidth = '0px';
 
         mobileButton.classList.add("btn-light");
