@@ -12,19 +12,29 @@
 </head>
 
 <body>
-    <nav class="hyper-nav hn-top">
+    <nav class="hn-menu hn-top">
+
+        <!-- The hamburger menu state. -->
+        <input type="checkbox" class="hn-input-state hn-input-state-nav" id="cb">
+
         <div class="hn-nav">
             <div class="hn-section hn-section-brand">
-                <!--
-                    Navigation content that is visible regardless
-                    of device size comes here.
-                -->
+                <!-- Navigation content that is visible regardless of device size comes here. -->
+
+                <!-- The actual input element for the hamburger. Note that the element is hidden on desktop. -->
+                <label for="cb" class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                    <span class="hn-icon">
+                        <span class="hn-input-default">
+                            <!-- Content that is visible when the input state element is in its default state. -->
+                        </span>
+                        <span class="hn-input-active">
+                            <!-- Content that is visible when the input state element is in its activated state. -->
+                        </span>
+                    </span>
+                </label>
             </div>
             <div class="hn-section hn-section-body">
-                <!--
-                    Navigation content that is hidden behind a 
-                    menu toggle on mobile devices comes here.
-                -->
+                <!-- Navigation content that is hidden behind a menu toggle on mobile devices comes here. -->
             </div>
         </div>
     </nav>

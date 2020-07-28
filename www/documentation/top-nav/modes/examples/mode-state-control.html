@@ -13,7 +13,7 @@
 
 <body>
     <!-- The default HyperNav container. -->
-    <nav class="hyper-nav hn-top" id="hnh">
+    <nav class="hn-menu hn-top" id="hnh">
 
         <!--
             Radio buttons that control the currently selected mode.
@@ -86,6 +86,49 @@
                     <!-- Content here. -->
                 </label>
 
+            </div>
+        </div>
+
+        <!--
+            The container for a mode. 
+            Note: The class hn-mode-0 is important. This class is used to control visibility.
+        -->
+        <div class="hn-mode hn-mode-0">
+
+            <!-- 
+                The mode top bar. 
+                This will be positioned above the standard top navigation bar. 
+            -->
+            <div class="hn-mode-top">
+
+                <!-- 
+                    The mode top bar content. 
+                    The content could be anything, but this is an example of a HyperNav menu.
+                -->
+                <div class="hn-nav">
+                    <!--
+                        Standard HyperNav content here. 
+                        It is recommended to only insert hn-section-brand content here. This is after all
+                        only the top bar content (which is what the hn-section-brand is for).
+                    -->
+                </div>
+            </div>
+
+            <!-- 
+                The mode content. 
+                This will be positioned directly below the top bar. 
+            -->
+            <div class="hn-mode-content">
+
+                <!--
+                    The content could be anything, but this is an example of a HyperNav menu.
+                -->
+                <div class="hn-nav">
+                    <!--
+                        Standard HyperNav content here.
+                        It is recommended to only insert hn-section-body-content here, due to the positioning.
+                    --> 
+                </div>
             </div>
         </div>
     </nav>

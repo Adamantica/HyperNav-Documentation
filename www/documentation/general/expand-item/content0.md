@@ -56,3 +56,11 @@ You can change the placement of the dropdown menu with the following classes:
 These classes should be added to the `.hn-expand` element.
 
 <div class="example" data-src="examples/dropdown-placement.html"></div>
+
+## Nesting
+
+To nest the menus in HyperNav, just add an expand item within the `.hn-expand-body` element.
+The nesting depth is not limited, however, the maximum indentation level is by default 3. 
+This is controlled by the SCSS only variable `$hn-nesting-max-depth`.
+
+<div class="example" data-src="examples/nesting.html"></div>

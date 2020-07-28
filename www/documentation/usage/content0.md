@@ -3,7 +3,8 @@
 Clone (or download) the [HyperNav GitHub repository](https://github.com/Acmion/HyperNav) and link to 
 the file `hyper-nav.min.css` from a HTML document. You must also link to a file that contains the
 declarations for the CSS variables (this is most often a custom file). The default CSS variable 
-declarations can be found in the file `themes/default/variables.min.css`.
+declarations can be found in the file `themes/default/variables.min.css`. Each project should probably
+be override these variables.
 
 ```
 <link rel="stylesheet" href="path/to/HyperNav/dist/hyper-nav.min.css"/>

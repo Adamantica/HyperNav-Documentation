@@ -1,0 +1,124 @@
+﻿@page
+
+
+<style>
+
+    #features ul
+    {
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    #features li::before
+    {
+        content: "✔";
+    }
+</style>
+
+<div id="features">
+
+    <h1>
+        Features
+    </h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                General
+            </h3>
+            <ul>
+                <li>
+                    CSS only
+                </li>
+                <li>
+                    No JavaScript
+                </li>
+                <li>
+                    Icons
+                </li>
+                <li>
+                    Text
+                </li>
+                <li>
+                    Bold displacement fix
+                </li>
+                <li>
+                    Customizable via variables
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>
+                Top Nav Menu
+            </h3>
+            <ul>
+                <li>
+                    Responsive
+                </li>
+                <li>
+                    Inifinitely nestable
+                </li>
+                <li>
+                    Fixed and static
+                </li>
+                <li>
+                    Drop down menus
+                </li>
+                <li>
+                    Mega menus
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>
+                Side Nav Menu
+            </h3>
+            <ul>
+                <li>
+                    Responsive
+                </li>
+                <li>
+                    Inifinitely nestable
+                </li>
+                <li>
+                    Fixed, static and overlay
+                </li>
+                <li>
+                    Iconified view
+                </li>
+                <li>
+                    Full width view
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br />
+
+    <h2>
+        Browser Compatibility
+    </h2>
+
+    <ul>
+        <li>
+            Chrome
+        </li>
+        <li>
+            Chromium
+        </li>
+        <li>
+            Firefox
+        </li>
+        <li>
+            Edge
+        </li>
+        <li>
+            IE11*
+        </li>
+    </ul>
+
+    * IE11 is not compatible with CSS variables, which HyperNav uses. To fix this problem, either
+    compile the project from source without the CSS variable declarations or use 
+    <a href="https://github.com/jhildenbiddle/css-vars-ponyfill">css-vars-ponyfill</a>.
+
+</div>

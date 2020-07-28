@@ -1,8 +1,13 @@
-﻿# Collapsible Example
+﻿# Collapsible
 
 The HyperNav side navigation menu supports a collapsed state on both mobile and
 desktop devices. The collapsed state is infinitely nestable and depends on
-icons for proper user experience. 
+icons for proper user experience. This kind of menu should only feature full 
+expand items, because clicking the small plus sign in the collapsed state
+is quite difficult. Alternatively, one could implement some JS (or page 
+generation code) that improves usability. See 
+[this demo](https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-split-buttons.html)
+for a way to improve the usability of split expand items with JavaScript.
 
 ## Default
 

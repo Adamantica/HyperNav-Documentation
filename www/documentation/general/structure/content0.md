@@ -21,23 +21,14 @@ devices.
 Sometimes you might want to align some navigation items to the start
 and some to the end. This can be achieved by adding an element
 with the class `.hn-spacer`. All `.hn-spacer` elements have an equal width
-and height. More specifically, they have `flex: 1`, which allows for many 
-content alignments.
+and height. More specifically, they have `flex: 1`.
 
 <div class="example only-code" data-src="examples/alignment.html"></div>
 
-## Toggleable Menu
+## Menu with Overlay
 
-Often navigation menus should look somewhat different on mobile and desktop
-devices, due to the available screen space. This is why HyperNav supports
-a toggleable menu (usually a hamburger icon).
+Often an overlay for the navigation menu should be used, so that the content
+below the it (the actual page content) gets darker. Additionally,
+the navigation menu is closed by clicking on this region.
 
-<div class="example only-code" data-src="examples/toggleable.html"></div>
-
-## Toggleable Menu with Overlay
-
-Often an overlay for the toggleable menu should be used, so that the content
-below the navigation menu (the actual page content) gets darker. Additionally,
-the navigation menu is usually closed by clicking on this region.
-
-<div class="example only-code" data-src="examples/toggleable-with-overlay.html"></div>
+<div class="example only-code" data-src="examples/overlay.html"></div>
