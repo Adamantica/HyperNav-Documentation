@@ -4,5 +4,5 @@ Layout: LandingPage
 ShowSideNavigationMenu: False
 
 SubPageOrder:
-  - features
+  - about
   - documentation
