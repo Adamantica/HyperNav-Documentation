@@ -64,3 +64,10 @@ The nesting depth is not limited, however, the maximum indentation level is by d
 This is controlled by the SCSS only variable `$hn-nesting-max-depth`.
 
 <div class="example" data-src="examples/nesting.html"></div>
+
+## Active Child State
+
+If an expand item has an active child (on any level of depth), then the class `.hn-active-child` 
+should be added to the `.hn-item` directly below `.hn-expand`.
+
+<div class="example" data-src="examples/active-child.html"></div>
