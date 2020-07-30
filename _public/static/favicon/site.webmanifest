@@ -1,6 +1,6 @@
 {
-    "name": "Communicator-CMS",
-    "short_name": "Communicator-CMS",
+    "name": "HyperNav",
+    "short_name": "HyperNav",
     "icons": [
         {
             "src": "/static/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#020202",
-    "background_color": "#020202",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
