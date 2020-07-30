@@ -4,8 +4,7 @@ This section documents HyperNav from a general perspective. This means that this
 is applicable for both the top and side navigation menu. Specific documentation for the 
 side and top navigation can be found under their respective pages. 
 
-The content under **General** is more theoretical and thus no actual live examples 
-are shown. Code examples are, however, shown. More practical examples can be found 
+The content under **General** is more theoretical, more practical examples can be found 
 under the sections [Top Navigation](/documentation/top-nav/) and 
 [Side Navigation](/documentation/side-nav/).
 
