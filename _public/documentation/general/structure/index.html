@@ -832,6 +832,15 @@ and height. More specifically, they have <code>flex: 1</code>.</p>
 below the it (the actual page content) gets darker. Additionally,
 the navigation menu is closed by clicking on this region.</p>
 <div class="example only-code" data-src="examples/overlay.html"></div>
+<h2 id="disable-focus-styles">Disable Focus Styles</h2>
+<p>HyperNav uses <code>:focus</code> styles to enable basic keyboard accessibility,
+however, this also affects pointer usage. The coloring of clicked items
+will remain even if they are no longer hovered. To disable the <code>:focus</code>
+styles, you should add the class <code>.hn-menu-no-focus</code> to the <code>.hn-menu</code>
+element. This will destroy the keyboard accessibility, but by using
+JavaScript that listens to certain keyboard elements, the class could
+be toggled (not provided by HyperNav).</p>
+<div class="example only-code" data-src="examples/no-focus.html"></div>
                 </div>
             </div>
         </div>
